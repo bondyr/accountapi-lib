@@ -1,0 +1,14 @@
+FROM node:12.21.0-alpine AS base
+RUN npm install -g npm 
+
+FROM base AS unittest
+WORKDIR /files
+COPY package.json /files
+COPY src /files/src
+RUN npm install 
+RUN npm run unittest
+
+FROM unittest AS libtest
+RUN apk add curl
+COPY test /files/test
+CMD [ "npm", "run", "test"]

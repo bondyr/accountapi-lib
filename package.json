@@ -1,0 +1,31 @@
+{
+  "name": "accountapi-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client-accountapi.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "unittest": "mocha ./src/js/*.test.js",
+    "test": "mocha ./test/*.test.js",
+    "client": "node example/client.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bondyr/accountapi-lib.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bondyr/accountapi-lib/issues"
+  },
+  "homepage": "https://github.com/bondyr/accountapi-lib#readme",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "sinon": "^11.1.2",
+    "superagent": "^6.1.0",
+    "uuid": "^8.3.2",
+    "mocha": "^9.1.2"
+  }
+}
